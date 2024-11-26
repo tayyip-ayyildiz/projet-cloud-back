@@ -23,6 +23,13 @@ public class Article {
 
     public Article() {}
 
+    public Article(UUID id, String name, String description, String image) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.image = image;
+    }
+
     public String getDescription() {
         return description;
     }
