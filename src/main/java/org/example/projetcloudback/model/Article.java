@@ -12,14 +12,16 @@ import java.util.UUID;
 public class Article {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Utilisez Identity ou UUID selon votre besoin
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)  // Utilisez Identity ou UUID selon votre besoin
+    private UUID id;
 
     private String name;
 
     private String description;
 
     private String image;
+
+    public Article() {}
 
     public String getDescription() {
         return description;
@@ -37,18 +39,17 @@ public class Article {
         this.image = image;
     }
 
-    // Constructeurs, getters et setters
-    public Article() {}
+
 
     public Article(String name) {
         this.name = name;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
