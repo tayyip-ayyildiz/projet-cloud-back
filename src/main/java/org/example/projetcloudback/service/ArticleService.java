@@ -32,4 +32,6 @@ public class ArticleService {
     public void deleteArticleById(UUID id) {
         articleRepository.deleteById(id);
     }
+
+    public void updateArticle(Article article) {articleRepository.save(article);}
 }
